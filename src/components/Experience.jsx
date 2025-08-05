@@ -7,7 +7,7 @@ export const Experience = () => {
    const { bloom, bloomIntensity } = useControls({
       bloom: { value: true, label: "Enable Bloom" },
       bloomIntensity: {
-         value: 1,
+         value: 0.6,
          min: 0,
          max: 5,
          step: 0.1,

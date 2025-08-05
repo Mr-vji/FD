@@ -100,26 +100,26 @@ const Void = ({ mouseAnimationRef, ...props }) => {
          <VFXEmitter
             ref={mouseAnimationRef}
             emitter="sparks"
-            debug
+            // debug
             settings={{
                duration: 1.5,
                delay: 0,
                nbParticles: 500,
                spawnMode: "time",
                loop: true,
-               startPositionMin: [-0.5, -0.0, -0.5],
-               startPositionMax: [0.5, 0.0, 1],
+               startPositionMin: [-0.5, -0.1, -0.5],
+               startPositionMax: [0.5, 0.1, 1],
                startRotationMin: [Math.PI, 0, 0], // Changed to [0, 0, 0] for no initial rotation
                startRotationMax: [-Math.PI, 0, 0], // Changed to [0, 0, 0] for no initial rotation
                particlesLifetime: [0.5, 2.0],
-               speed: [0, 1],
-               directionMin: [-0.1, 0.05, -0.1],
+               speed: [0, 0.5],
+               directionMin: [-0.1, 0.1, -0.1],
                directionMax: [0.1, -0.1, 0.1],
                rotationSpeedMin: [0, 0, 0],
                rotationSpeedMax: [0, 0, 0],
                colorStart: ["#3fba4e"],
                colorEnd: ["#2f52c3"],
-               size: [0.5, 0.8],
+               size: [0.3, 1],
             }}
          />
       </group>
