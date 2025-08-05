@@ -2,6 +2,7 @@ import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useControls } from "leva";
 import { Object } from "./Object";
+import { Uji } from "./Uji";
 
 export const Experience = () => {
    const { bloom, bloomIntensity } = useControls({
@@ -21,7 +22,8 @@ export const Experience = () => {
          <directionalLight position={[1, 1, 5]} intensity={1} />
          <ContactShadows position={[0, -1.2, 0]} scale={20} blur={1} far={12} opacity={0.2} />
 
-         <Object />
+         {/* <Object /> */}
+         <Uji />
 
          {bloom && (
             <EffectComposer>
