@@ -122,6 +122,7 @@ const VFXS = ({ nodes }) => {
             geometry={<primitive object={nodes.Plant_7.geometry} />}
             settings={{
                nbParticles: 1000,
+               gravity: [0, -1, 0],
                intensity: 2,
                fadeSize: [0.9, 0.1],
             }}
