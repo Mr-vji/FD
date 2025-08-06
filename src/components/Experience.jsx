@@ -3,6 +3,9 @@ import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useControls } from "leva";
 import { Object } from "./Object";
 import { Uji } from "./Uji";
+import { MossMesh } from "./MossMesh";
+import HoverMossPlane, { MossShaderMaterial } from "./MossShaderMaterial";
+import * as THREE from "three";
 
 export const Experience = () => {
    const { bloom, bloomIntensity } = useControls({
@@ -21,9 +24,11 @@ export const Experience = () => {
          {/* <Environment preset="studio" /> */}
          <directionalLight position={[1, 1, 5]} intensity={1} />
          <ContactShadows position={[0, -1.2, 0]} scale={20} blur={1} far={12} opacity={0.2} />
+         <Environment preset="city" />
 
          {/* <Object /> */}
-         <Uji />
+         {/* <Uji /> */}
+         {/* <MossMesh /> */}
 
          {bloom && (
             <EffectComposer>

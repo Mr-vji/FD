@@ -74,18 +74,6 @@ const VFXS = ({ nodes, texture }) => {
             }}
             material={<meshStandardMaterial roughness={1} metalness={1} color={"white"} />}
          />
-
-         {/* <VFXParticles
-            name="sparks"
-            // geometry={<coneGeometry args={[0.5, 1, 8, 1]} />}
-            geometry={<planeGeometry args={[1, 1]} />}
-            settings={{
-               nbParticles: 100000,
-               renderMode: "billboard",
-               intensity: 10,
-               fadeSize: [0.1, 0.1],
-            }}
-         /> */}
       </>
    );
 };
@@ -104,11 +92,11 @@ const Void = ({ mouseAnimationRef, ...props }) => {
             settings={{
                duration: 1.5,
                delay: 0,
-               nbParticles: 800,
+               nbParticles: 500,
                spawnMode: "time",
                loop: true,
-               startPositionMin: [-0.1, -0.2, -0.0],
-               startPositionMax: [0.1, 0.2, 0.1],
+               startPositionMin: [-0.15, -0.25, -0.1],
+               startPositionMax: [0.15, 0.25, 0.19],
                startRotationMin: [Math.PI, 0, 0], // Changed to [0, 0, 0] for no initial rotation
                startRotationMax: [-Math.PI, 0, 0], // Changed to [0, 0, 0] for no initial rotation
                particlesLifetime: [0.5, 2.0],
